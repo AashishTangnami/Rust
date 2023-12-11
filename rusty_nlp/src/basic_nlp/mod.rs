@@ -8,7 +8,17 @@ fn one_hot_encode(text: &str) -> Vec<i32> {
     }
     one_hot
 }
-
+fn remove_stopwords(text: &str) -> String {
+    let stopwords: Vec<&str> = vec![];
+    let mut new_text: String = String::new();
+    for word in text.split_whitespace() {
+        if !stopwords.contains(&word) {
+            new_text.push_str(word);
+            new_text.push_str(" ");
+        }
+    }
+    new_text
+}
 fn to_lowercase(text: &str) -> String {
     text.to_lowercase()
 }
@@ -20,7 +30,8 @@ fn tokenize(text: &str) -> Vec<&str> {
 pub fn main_code(){
     let text: &str = " I am learning Rust programming and I am doing NLP in rust";
     let lower_text: &str = &to_lowercase(text);
-    let tokens: Vec<&str> = tokenize(lower_text);
+    let remove_stopwords_text: &str = &remove_stopwords(lower_text);
+    let tokens: Vec<&str> = tokenize(remove_stopwords_text);
     let mut text_one_hot: Vec<Vec<i32>> = Vec::new();
 
     for token in tokens {
