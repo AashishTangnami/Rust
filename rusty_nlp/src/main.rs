@@ -1,6 +1,9 @@
 mod basic_nlp;
 use basic_nlp::main_code;
 
+mod rustling;
+use rustling::read_csv::csv_reader;
+
 fn main() {
 
     main_code();
@@ -17,6 +20,7 @@ fn main() {
 
     println!("The value of result is: {}", result3);
 
+    csv_reader();
    
 }
 
