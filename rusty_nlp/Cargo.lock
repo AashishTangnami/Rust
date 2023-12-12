@@ -1274,6 +1274,8 @@ name = "rusty_nlp"
 version = "0.1.0"
 dependencies = [
  "rust-bert",
+ "tch",
+ "torch-sys",
 ]
 
 [[package]]
