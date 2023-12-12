@@ -5,3 +5,5 @@ edition = "2021"
 
 [dependencies]
 rust-bert = "0.21.0"
+tch = "0.13.0"
+torch-sys = "0.13.0"
