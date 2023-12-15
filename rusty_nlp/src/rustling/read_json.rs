@@ -1,6 +1,12 @@
 use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Deserialize, Serialize)]
+#[derive(Debug, Deserialize, Serialize)] 
+
+// derive is a macro that implements the trait for the struct, 
+// traits are like interfaces in other languages, 
+// interfaces are a way to define behavior,
+// behavior is what a type can do.
+
 pub struct Customer {
     pub id: u32,
     pub name: String,
